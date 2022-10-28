@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1ZeskLkaR4QOZNnZibLraQTydXxmRMfp1F4Tx2cOMVigMj2mow1nFu1ZDFxHgTwzrSGWZ74CykLankGxbzqujw==",
+  "success": true,
+  "projectFilePath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Telegram\\TgBot.DataSphere\\TgBot.DataSphere.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sluchaj\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Sluchaj\\.nuget\\packages\\telegram.bot\\18.0.0\\telegram.bot.18.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

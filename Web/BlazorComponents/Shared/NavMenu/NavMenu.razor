@@ -1,0 +1,25 @@
+﻿@inherits TemplateParentBase
+
+<CascadingValue Name="Parent" Value="this">
+    <div class="btn-group" role="group">
+
+        @foreach (NavItem child in Childs)
+        {
+            <button type="button"
+                class="btn @GetChildClass(child)"
+                @onclick=@( () => ActivateChild(child) )>
+                @child.Text
+            </button>
+        }
+    </div>
+    <div>
+        @ChildContent
+    </div>
+</CascadingValue>
+
+@code{
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+}

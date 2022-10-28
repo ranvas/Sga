@@ -1,0 +1,16 @@
+﻿@inherits ComponentBase
+@code {
+    [CascadingParameter(Name = "Parent")]
+    public TemplateParentBase? Parent { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (Parent == null)
+            throw new ArgumentNullException(nameof(Parent), "Child must exist within a Parent");
+        Parent.AddChild(this);
+        base.OnInitialized();
+    }
+}

@@ -1,0 +1,25 @@
+﻿@inherits ComponentBase
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    public TemplateChildBase? ActiveChild { get; set; }
+    public List<TemplateChildBase> Childs = new List<TemplateChildBase>();
+
+    public virtual void AddChild(TemplateChildBase child)
+    {
+        Childs.Add(child);
+        if (Childs.Count == 1)
+            ActiveChild = child;
+        StateHasChanged();
+    }
+    public virtual string GetChildClass(TemplateChildBase child)
+    {
+        return child == ActiveChild ? "primary" : "secondary";
+    }
+
+    public virtual void ActivateChild(TemplateChildBase child)
+    {
+        ActiveChild = child;
+    }
+}

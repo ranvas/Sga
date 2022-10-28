@@ -1,0 +1,17 @@
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\bin\Debug\net6.0\DataAccess.SqlLite.deps.json
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\bin\Debug\net6.0\DataAccess.SqlLite.dll
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\bin\Debug\net6.0\DataAccess.SqlLite.pdb
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\bin\Debug\net6.0\DataAccess.Abstractions.dll
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\bin\Debug\net6.0\DataAccess.EFCore.dll
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\bin\Debug\net6.0\DataAccess.EFCore.pdb
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\bin\Debug\net6.0\DataAccess.Abstractions.pdb
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\obj\Debug\net6.0\DataAccess.SqlLite.csproj.AssemblyReference.cache
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\obj\Debug\net6.0\DataAccess.SqlLite.GeneratedMSBuildEditorConfig.editorconfig
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\obj\Debug\net6.0\DataAccess.SqlLite.AssemblyInfoInputs.cache
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\obj\Debug\net6.0\DataAccess.SqlLite.AssemblyInfo.cs
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\obj\Debug\net6.0\DataAccess.SqlLite.csproj.CoreCompileInputs.cache
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\obj\Debug\net6.0\DataAccess.SqlLite.csproj.CopyComplete
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\obj\Debug\net6.0\DataAccess.SqlLite.dll
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\obj\Debug\net6.0\refint\DataAccess.SqlLite.dll
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\obj\Debug\net6.0\DataAccess.SqlLite.pdb
+E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.SqlLite\obj\Debug\net6.0\ref\DataAccess.SqlLite.dll

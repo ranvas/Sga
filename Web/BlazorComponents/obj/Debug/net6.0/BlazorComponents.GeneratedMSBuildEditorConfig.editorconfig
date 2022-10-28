@@ -1,0 +1,56 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BlazorComponents
+build_property.RootNamespace = BlazorComponents
+build_property.ProjectDir = E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/work/SGA/core60/RevolutionMatter/Web/BlazorComponents/Shared/ComponentBase/ComponentBase.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudEJhc2VcQ29tcG9uZW50QmFzZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/work/SGA/core60/RevolutionMatter/Web/BlazorComponents/Shared/ComponentBase/TemplateChildBase.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudEJhc2VcVGVtcGxhdGVDaGlsZEJhc2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/work/SGA/core60/RevolutionMatter/Web/BlazorComponents/Shared/ComponentBase/TemplateParentBase.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudEJhc2VcVGVtcGxhdGVQYXJlbnRCYXNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/work/SGA/core60/RevolutionMatter/Web/BlazorComponents/Shared/NavMenu/NavItem.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnVcTmF2SXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/work/SGA/core60/RevolutionMatter/Web/BlazorComponents/Shared/NavMenu/NavMenu - Copy.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnVcTmF2TWVudSAtIENvcHkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/work/SGA/core60/RevolutionMatter/Web/BlazorComponents/Shared/NavMenu/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnVcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/work/SGA/core60/RevolutionMatter/Web/BlazorComponents/Shared/TabControl/TabControl.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFRhYkNvbnRyb2xcVGFiQ29udHJvbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/work/SGA/core60/RevolutionMatter/Web/BlazorComponents/Shared/TabControl/TabPage.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFRhYkNvbnRyb2xcVGFiUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/work/SGA/core60/RevolutionMatter/Web/BlazorComponents/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U3VydmV5UHJvbXB0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/work/SGA/core60/RevolutionMatter/Web/BlazorComponents/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 

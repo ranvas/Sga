@@ -1,0 +1,144 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.EFCore\\DataAccess.EFCore.csproj": {}
+  },
+  "projects": {
+    "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.Abstractions\\DataAccess.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.Abstractions\\DataAccess.Abstractions.csproj",
+        "projectName": "DataAccess.Abstractions",
+        "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.Abstractions\\DataAccess.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\Sluchaj\\.nuget\\packages\\",
+        "outputPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.Abstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sluchaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.EFCore\\DataAccess.EFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.EFCore\\DataAccess.EFCore.csproj",
+        "projectName": "DataAccess.EFCore",
+        "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.EFCore\\DataAccess.EFCore.csproj",
+        "packagesPath": "C:\\Users\\Sluchaj\\.nuget\\packages\\",
+        "outputPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.EFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sluchaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.Abstractions\\DataAccess.Abstractions.csproj": {
+                "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\DataAccess\\DataAccess.Abstractions\\DataAccess.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

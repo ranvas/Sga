@@ -1,0 +1,17 @@
+﻿@inherits TemplateChildBase
+
+@if (Parent!.ActiveChild == this)
+{
+    @ChildContent
+}
+
+@code {
+    [Parameter]
+    public string? Text { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+}
+

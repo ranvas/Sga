@@ -1,0 +1,15 @@
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\BlazorComponents.csproj.AssemblyReference.cache
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\BlazorComponents.GeneratedMSBuildEditorConfig.editorconfig
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\BlazorComponents.AssemblyInfoInputs.cache
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\BlazorComponents.AssemblyInfo.cs
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\BlazorComponents.csproj.CoreCompileInputs.cache
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\bin\Debug\net6.0\BlazorComponents.deps.json
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\bin\Debug\net6.0\BlazorComponents.dll
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\bin\Debug\net6.0\BlazorComponents.pdb
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\staticwebassets.build.json
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\staticwebassets.development.json
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\scopedcss\bundle\BlazorComponents.styles.css
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\BlazorComponents.dll
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\refint\BlazorComponents.dll
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\BlazorComponents.pdb
+E:\work\SGA\core60\RevolutionMatter\Web\BlazorComponents\obj\Debug\net6.0\ref\BlazorComponents.dll
