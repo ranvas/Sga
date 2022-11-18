@@ -11,7 +11,7 @@ namespace AllTests
         [Fact]
         public async Task CheckIntegrator()
         {
-            var builder = WebIntegrator.IntegrateBuilder<Startup>(new string[] { });
+            var builder = new WebIntegrator().CreateAdvancedWebHostBuilder<Startup>(new string[] { });
             builder.UseTestServer();
             var server = new TestServer(builder);
             var client = server.CreateClient();

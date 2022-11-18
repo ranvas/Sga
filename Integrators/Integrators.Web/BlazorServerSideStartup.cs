@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 
 namespace Integrators.Web
 {
-    public class BlazorServerSideStartup : 合気道Startup
+    public class BlazorServerSideStartup : WebStartupBase
     {
-        public override void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime appLifeTime, IConfiguration configuration)
+        public override void ConfigureBase(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime appLifeTime, IConfiguration configuration)
         {
             if (env.IsDevelopment())
             {
@@ -34,10 +34,9 @@ namespace Integrators.Web
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
-            base.Configure(app, env, appLifeTime, configuration);
         }
 
-        public override void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        public override void ConfigureServicesBase(IServiceCollection services, IConfiguration configuration)
         {
             var provider = services.BuildServiceProvider();
             var env = provider.GetRequiredService<IHostEnvironment>();
@@ -45,7 +44,6 @@ namespace Integrators.Web
 
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            base.ConfigureServices(services, configuration);
         }
 
     }

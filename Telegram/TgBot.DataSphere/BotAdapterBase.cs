@@ -12,27 +12,43 @@ namespace TgBot.DataSphere
     {
         TelegramBotClient _bot;
         protected CancellationTokenSource CancellationToken;
-        public BotAdapterBase(string token, bool webHooks)
+        public BotAdapterBase(string token)
         {
             _bot = new TelegramBotClient(token);
             CancellationToken = new CancellationTokenSource();
+        }
+
+        #region StartReceiving
+
+        public void StartReceiving()
+        {
+            LogSimple("StartReceiving bot ");
             var receiverOptions = new ReceiverOptions
             {
                 AllowedUpdates = Array.Empty<UpdateType>() // receive all update types
             };
-            if (webHooks)
-            {
-                LogSimple("StartReceiving bot ");
-                _bot.StartReceiving(
-                    updateHandler: HandleUpdateAsync,
-                    pollingErrorHandler: HandlePollingErrorAsync,
-                    receiverOptions: receiverOptions,
-                    cancellationToken: CancellationToken.Token
-                );
-            }
+            _bot.StartReceiving(
+                updateHandler: HandleUpdateAsync,
+                pollingErrorHandler: HandlePollingErrorAsync,
+                receiverOptions: receiverOptions,
+                cancellationToken: CancellationToken.Token
+            );
         }
 
-        #region StartReceiving
+        public void StartReceiving<T>() where T : class
+        {
+            LogSimple("StartReceiving bot ");
+            var receiverOptions = new ReceiverOptions
+            {
+                AllowedUpdates = Array.Empty<UpdateType>() // receive all update types
+            };
+            _bot.StartReceiving(
+                updateHandler: HandleUpdateAsync,
+                pollingErrorHandler: HandlePollingErrorAsync,
+                receiverOptions: receiverOptions,
+                cancellationToken: CancellationToken.Token
+            );
+        }
 
         Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
         {
@@ -49,8 +65,49 @@ namespace TgBot.DataSphere
 
         async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
-            await HandleUpdate(update, cancellationToken);
+            await HandleUpdateAsync(update, cancellationToken);
         }
+
+        /// <summary>
+        /// At most one of the optional parameters can be present in any given update.
+        /// </summary>
+        async Task HandleUpdateAsync(Update update, CancellationToken cancellationToken)
+        {
+            if (cancellationToken.IsCancellationRequested)
+                return;
+            if (update.Message is { } message)
+            {
+                LogSimple("handle message");
+                try
+                {
+                    await HandleMessage(message, update);
+                }
+                catch (Exception e)
+                {
+                    LogSimple(e.ToString());
+                }
+                return;
+            }
+            if (update.EditedMessage is { } editedMessage)
+            {
+                LogSimple("handle edited message");
+                try
+                {
+                    await HandleEditedMessage(editedMessage, update);
+                }
+                catch (Exception e)
+                {
+                    LogSimple(e.ToString());
+                }
+                return;
+            }
+            LogSimple($"Unknown message type");
+        }
+
+        //async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
+        //{
+        //    await HandleUpdate(update, cancellationToken);
+        //}
 
         #endregion
 
@@ -61,25 +118,37 @@ namespace TgBot.DataSphere
             return await _bot.GetMeAsync();
         }
 
-        public async Task HandleUpdate(Update update)
+        public async Task HandleUpdateAsync(Update update)
         {
-            await HandleUpdate(update, CancellationToken.Token);
+            await HandleUpdateAsync(update, CancellationToken.Token);
+        }
+
+        public async Task SendTextMessage(long chatId, string text, ParseMode mode)
+        {
+            _ = await _bot.SendTextMessageAsync(
+                chatId: chatId,
+                text: text,
+                parseMode: mode,
+                cancellationToken: CancellationToken.Token);
+        }
+
+        public async Task SendTextMessage(string chatId, string text, ParseMode mode)
+        {
+            _ = await _bot.SendTextMessageAsync(
+                chatId: chatId,
+                text: text,
+                parseMode: mode,
+                cancellationToken: CancellationToken.Token);
         }
 
         public async Task SendTextMessage(long chatId, string text)
         {
-            _ = await _bot.SendTextMessageAsync(
-                chatId: chatId,
-                text: text,
-                cancellationToken: CancellationToken.Token);
+            await SendTextMessage(chatId, text, ParseMode.Html);
         }
 
         public async Task SendTextMessage(string chatId, string text)
         {
-            _ = await _bot.SendTextMessageAsync(
-                chatId: chatId,
-                text: text,
-                cancellationToken: CancellationToken.Token);
+            await SendTextMessage(chatId, text, ParseMode.Html);
         }
 
         #endregion
@@ -116,40 +185,6 @@ namespace TgBot.DataSphere
 
         #endregion
 
-        /// <summary>
-        /// At most one of the optional parameters can be present in any given update.
-        /// </summary>
-        private async Task HandleUpdate(Update update, CancellationToken cancellationToken)
-        {
-            if (cancellationToken.IsCancellationRequested)
-                return;
-            if (update.Message is { } message)
-            {
-                LogSimple("handle message");
-                try
-                {
-                    await HandleMessage(message, update);
-                }
-                catch (Exception e)
-                {
-                    LogSimple(e.ToString());
-                }
-                return;
-            }
-            if (update.EditedMessage is { } editedMessage)
-            {
-                LogSimple("handle edited message");
-                try
-                {
-                    await HandleEditedMessage(editedMessage, update);
-                }
-                catch (Exception e)
-                {
-                    LogSimple(e.ToString());
-                }
-                return;
-            }
-            LogSimple($"Unknown message type");
-        }
+
     }
 }

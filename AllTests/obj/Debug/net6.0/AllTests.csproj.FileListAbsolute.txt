@@ -105,13 +105,9 @@ E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Asp
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Authentication.Core.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Authentication.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
-E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Authorization.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Authorization.Policy.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Components.Authorization.dll
-E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Components.dll
-E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Components.Forms.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Components.Server.dll
-E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Components.Web.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cors.dll
@@ -142,7 +138,6 @@ E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Asp
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Identity.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Localization.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Localization.Routing.dll
-E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Metadata.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Mvc.Core.dll
@@ -210,7 +205,6 @@ E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Ext
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.dll
-E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Extensions.Logging.Configuration.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Extensions.Logging.Console.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Extensions.Logging.Debug.dll
@@ -224,7 +218,6 @@ E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Ext
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Extensions.Options.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Extensions.Primitives.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Extensions.WebEncoders.dll
-E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.JSInterop.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.Net.Http.Headers.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.VisualBasic.Core.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\refs\Microsoft.VisualBasic.dll
@@ -406,3 +399,14 @@ E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\appsettings.json
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\BlazorServerSideTestApplication.exe
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\BlazorServerSideTestApplication.dll
 E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\BlazorServerSideTestApplication.pdb
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\Microsoft.JSInterop.dll
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\BlazorComponents.dll
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\Integrators.Core.dll
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\BlazorComponents.pdb
+E:\work\SGA\core60\RevolutionMatter\AllTests\bin\Debug\net6.0\Integrators.Core.pdb

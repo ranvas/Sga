@@ -37,3 +37,5 @@ E:\work\SGA\core60\RevolutionMatter\TestApplications\BlazorServerSideTestApplica
 E:\work\SGA\core60\RevolutionMatter\TestApplications\BlazorServerSideTestApplication\bin\Debug\net6.0\System.IO.Pipelines.dll
 E:\work\SGA\core60\RevolutionMatter\TestApplications\BlazorServerSideTestApplication\bin\Debug\net6.0\BlazorComponents.dll
 E:\work\SGA\core60\RevolutionMatter\TestApplications\BlazorServerSideTestApplication\bin\Debug\net6.0\BlazorComponents.pdb
+E:\work\SGA\core60\RevolutionMatter\TestApplications\BlazorServerSideTestApplication\bin\Debug\net6.0\Integrators.Core.dll
+E:\work\SGA\core60\RevolutionMatter\TestApplications\BlazorServerSideTestApplication\bin\Debug\net6.0\Integrators.Core.pdb

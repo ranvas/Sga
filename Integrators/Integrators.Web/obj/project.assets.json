@@ -1254,6 +1254,19 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "Integrators.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Hosting": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Integrators.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Integrators.Core.dll": {}
+        }
       }
     }
   },
@@ -2654,10 +2667,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Integrators.Core/1.0.0": {
+      "type": "project",
+      "path": "../Integrators.Core/Integrators.Core.csproj",
+      "msbuildProject": "../Integrators.Core/Integrators.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Integrators.Core >= 1.0.0",
       "Microsoft.AspNetCore >= 2.2.0",
       "Microsoft.AspNetCore.Hosting >= 2.2.7",
       "Microsoft.Extensions.Hosting >= 6.0.0"
@@ -2697,7 +2716,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Core\\Integrators.Core.csproj": {
+              "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Core\\Integrators.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

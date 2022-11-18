@@ -10,3 +10,6 @@ E:\work\SGA\core60\RevolutionMatter\Integrators\Integrators.Web\obj\Debug\net6.0
 E:\work\SGA\core60\RevolutionMatter\Integrators\Integrators.Web\obj\Debug\net6.0\refint\Integrators.Web.dll
 E:\work\SGA\core60\RevolutionMatter\Integrators\Integrators.Web\obj\Debug\net6.0\Integrators.Web.pdb
 E:\work\SGA\core60\RevolutionMatter\Integrators\Integrators.Web\obj\Debug\net6.0\ref\Integrators.Web.dll
+E:\work\SGA\core60\RevolutionMatter\Integrators\Integrators.Web\bin\Debug\net6.0\Integrators.Core.dll
+E:\work\SGA\core60\RevolutionMatter\Integrators\Integrators.Web\bin\Debug\net6.0\Integrators.Core.pdb
+E:\work\SGA\core60\RevolutionMatter\Integrators\Integrators.Web\obj\Debug\net6.0\Integrators.Web.csproj.CopyComplete

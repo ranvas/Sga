@@ -7,14 +7,28 @@ using Telegram.Bot.Types;
 
 namespace TgBot.DataSphere
 {
+    /// <summary>
+    /// obsolete. Use BotDispatchingServiceBase instead
+    /// </summary>
     public class BotServiceBase : BotAdapterBase
     {
         protected Dictionary<string, BotCommandBase> Commands { get; set; }
-        public BotServiceBase(string token, bool webHooks)
-            : base(token, webHooks)
-        {
-            Commands = new Dictionary<string, BotCommandBase>();
+
+        public BotServiceBase()
+            : this(string.Empty)
+        { }
+
+        public BotServiceBase(string token)
+            : this(token, new())
+        { }
+
+        public BotServiceBase(string token, Dictionary<string, BotCommandBase> commands)
+            : base(token)
+        { 
+            Commands = commands; 
         }
+
+        public static BotServiceBase GetDefaultInstance() => new();
 
         public bool TryAddCommand(BotCommandBase command)
         {
@@ -28,7 +42,6 @@ namespace TgBot.DataSphere
 
         protected async override Task HandleMessage(Message message, Update executionContext)
         {
-            //await base.HandleMessage(message);
             var textMessage = message.Text;
             if (string.IsNullOrEmpty(textMessage))
                 return;

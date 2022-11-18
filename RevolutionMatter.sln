@@ -29,9 +29,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess.SqlLite", "DataA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telegram", "Telegram", "{56A570A4-4979-4489-B16D-BDE0C0BFB3F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TgBot.Abstractions", "Telegram\TgBot.Abstractions\TgBot.Abstractions.csproj", "{A641F5AB-2EEF-49AE-887F-14D33E1B31AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TgBot.Abstractions", "Telegram\TgBot.Abstractions\TgBot.Abstractions.csproj", "{A641F5AB-2EEF-49AE-887F-14D33E1B31AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TgBot.DataSphere", "Telegram\TgBot.DataSphere\TgBot.DataSphere.csproj", "{97201D52-CD8A-4514-9977-05B60798D4C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TgBot.DataSphere", "Telegram\TgBot.DataSphere\TgBot.DataSphere.csproj", "{97201D52-CD8A-4514-9977-05B60798D4C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integrators.Abstractions", "Integrators\Integrators.Abstractions\Integrators.Abstractions.csproj", "{240B8E99-5D7F-409A-AB62-52D0202045FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integrators.Core", "Integrators\Integrators.Core\Integrators.Core.csproj", "{9E4EF9B1-9B25-4602-B83C-B9057F3947C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integrators.Dispatcher", "Integrators\Integrators.Dispatcher\Integrators.Dispatcher.csproj", "{28799B5D-7121-4C8D-A3D2-9756057F451E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GoogleSheet", "GoogleSheet", "{5E6DFCED-E5F8-49B7-BBE3-D4F00A8FC661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleSheet.Abstractions", "GoogleSheet\GoogleSheet.Abstractions\GoogleSheet.Abstractions.csproj", "{55296AF5-0085-45A9-97A0-D2F3509F0E82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleSheet.Core", "GoogleSheet\GoogleSheet.Core\GoogleSheet.Core.csproj", "{902A31DD-8398-4DE4-A263-FC9FD676FE4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +91,26 @@ Global
 		{97201D52-CD8A-4514-9977-05B60798D4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97201D52-CD8A-4514-9977-05B60798D4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97201D52-CD8A-4514-9977-05B60798D4C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{240B8E99-5D7F-409A-AB62-52D0202045FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{240B8E99-5D7F-409A-AB62-52D0202045FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{240B8E99-5D7F-409A-AB62-52D0202045FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{240B8E99-5D7F-409A-AB62-52D0202045FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E4EF9B1-9B25-4602-B83C-B9057F3947C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E4EF9B1-9B25-4602-B83C-B9057F3947C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E4EF9B1-9B25-4602-B83C-B9057F3947C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4EF9B1-9B25-4602-B83C-B9057F3947C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28799B5D-7121-4C8D-A3D2-9756057F451E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28799B5D-7121-4C8D-A3D2-9756057F451E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28799B5D-7121-4C8D-A3D2-9756057F451E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28799B5D-7121-4C8D-A3D2-9756057F451E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55296AF5-0085-45A9-97A0-D2F3509F0E82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55296AF5-0085-45A9-97A0-D2F3509F0E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55296AF5-0085-45A9-97A0-D2F3509F0E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55296AF5-0085-45A9-97A0-D2F3509F0E82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{902A31DD-8398-4DE4-A263-FC9FD676FE4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{902A31DD-8398-4DE4-A263-FC9FD676FE4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{902A31DD-8398-4DE4-A263-FC9FD676FE4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{902A31DD-8398-4DE4-A263-FC9FD676FE4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +125,11 @@ Global
 		{D28DC11D-888D-4FA2-9F33-855A906AA44F} = {11E77474-98A1-4BC2-88A7-E5EAFA296D9F}
 		{A641F5AB-2EEF-49AE-887F-14D33E1B31AA} = {56A570A4-4979-4489-B16D-BDE0C0BFB3F7}
 		{97201D52-CD8A-4514-9977-05B60798D4C5} = {56A570A4-4979-4489-B16D-BDE0C0BFB3F7}
+		{240B8E99-5D7F-409A-AB62-52D0202045FF} = {3482C938-852B-4520-8CD9-FA718A50DF15}
+		{9E4EF9B1-9B25-4602-B83C-B9057F3947C2} = {3482C938-852B-4520-8CD9-FA718A50DF15}
+		{28799B5D-7121-4C8D-A3D2-9756057F451E} = {3482C938-852B-4520-8CD9-FA718A50DF15}
+		{55296AF5-0085-45A9-97A0-D2F3509F0E82} = {5E6DFCED-E5F8-49B7-BBE3-D4F00A8FC661}
+		{902A31DD-8398-4DE4-A263-FC9FD676FE4A} = {5E6DFCED-E5F8-49B7-BBE3-D4F00A8FC661}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24CC9028-D181-4011-A931-127C0270C2B0}

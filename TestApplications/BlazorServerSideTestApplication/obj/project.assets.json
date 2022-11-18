@@ -1375,10 +1375,24 @@
           "bin/placeholder/BlazorComponents.dll": {}
         }
       },
+      "Integrators.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Hosting": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Integrators.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Integrators.Core.dll": {}
+        }
+      },
       "Integrators.Web/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Integrators.Core": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0",
           "Microsoft.AspNetCore.Hosting": "2.2.7",
           "Microsoft.Extensions.Hosting": "6.0.0"
@@ -2914,6 +2928,11 @@
       "type": "project",
       "path": "../../Web/BlazorComponents/BlazorComponents.csproj",
       "msbuildProject": "../../Web/BlazorComponents/BlazorComponents.csproj"
+    },
+    "Integrators.Core/1.0.0": {
+      "type": "project",
+      "path": "../../Integrators/Integrators.Core/Integrators.Core.csproj",
+      "msbuildProject": "../../Integrators/Integrators.Core/Integrators.Core.csproj"
     },
     "Integrators.Web/1.0.0": {
       "type": "project",

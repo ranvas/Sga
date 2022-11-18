@@ -11,26 +11,26 @@ using System.Threading.Tasks;
 
 namespace Integrators.Web
 {
-    public abstract class WebStartupBase : IStartup
+    public abstract class WebStartupBase 
     {
-        public abstract void ConfigureServices(IServiceCollection services, IConfiguration configuration);
+        public abstract void ConfigureServicesBase(IServiceCollection services, IConfiguration configuration);
 
-        public abstract void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime appLifeTime, IConfiguration configuration);
+        public abstract void ConfigureBase(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime appLifeTime, IConfiguration configuration);
 
         public void Configure(IApplicationBuilder app)
         {
             var env = app.ApplicationServices.GetRequiredService<IWebHostEnvironment>();
             var appLifeTime = app.ApplicationServices.GetRequiredService<IHostApplicationLifetime>();
             var configuration = app.ApplicationServices.GetRequiredService<IConfiguration>();
-            Configure(app, env, appLifeTime, configuration);
+            ConfigureBase(app, env, appLifeTime, configuration);
         }
 
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             var provider = services.BuildServiceProvider();
             var configuration = provider.GetRequiredService<IConfiguration>();
-            ConfigureServices(services, configuration);
-            return services.BuildServiceProvider();
+            ConfigureServicesBase(services, configuration);
+            services.BuildServiceProvider();
         }
     }
 }
