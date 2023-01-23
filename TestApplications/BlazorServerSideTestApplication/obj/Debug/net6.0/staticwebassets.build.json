@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "Hash": "tJHOIoSqfXoegKaI2zJAVmmPJLDCBj1eRqWtZ76Sl10=",
+  "Hash": "th7x5+aIa+OFHK0eFcqoZUTAKomr3k4xGZAkU/jfbzw=",
   "Source": "BlazorServerSideTestApplication",
   "BasePath": "_content/BlazorServerSideTestApplication",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "E:\\work\\SGA\\core60\\RevolutionMatter\\Web\\BlazorComponents\\BlazorComponents.csproj",
+      "Identity": "F:\\Work\\Sga\\Web\\BlazorComponents\\BlazorComponents.csproj",
       "Version": 2,
       "Source": "BlazorComponents",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
       "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
-      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
       "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
-      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],
   "DiscoveryPatterns": [],

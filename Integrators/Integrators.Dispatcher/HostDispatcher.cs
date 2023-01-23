@@ -56,19 +56,23 @@ namespace Integrators.Dispatcher
         private async Task<TOut?> DispatchSimple<TOut>(object? request, string key)
         {
             var info = GetMethod(key);
-            if (info == null)
-                throw new NotImplementedException($"The handler for key {key} is not registered");
+            return await DispatchSimple<TOut>(request, key, info);
+        }
+
+        private async Task<TOut?> DispatchSimple<TOut>(object? request, string key, DispatcherInfo info)
+        {
+
             if (!ReturnTypeIsAssignableTo<TOut>(info))
                 throw new InvalidCastException($"The handler for key {key} returns {info.ResponseType}, although {typeof(TOut)} is expected");
             using var scope = _serviceProvider.CreateScope();
             return (TOut?)await HostDispatcherHelper.Invoke(info, request, scope);
         }
 
-        private DispatcherInfo? GetMethod(string key)
+        private DispatcherInfo GetMethod(string key)
         {
             if (RegisteredMethods.TryGetValue(key, out DispatcherInfo? info) && info.Resolved)
                 return info;
-            return default;
+            throw new NotImplementedException($"The handler for key {key} is not registered");
         }
 
         private bool ReturnTypeIsAssignableTo<T>(DispatcherInfo info)

@@ -22,3 +22,15 @@ E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.Abstractions\obj\Debug
 E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\refint\DataAccess.Abstractions.dll
 E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\DataAccess.Abstractions.pdb
 E:\work\SGA\core60\RevolutionMatter\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\ref\DataAccess.Abstractions.dll
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\bin\Debug\net6.0\DataAccess.Abstractions.deps.json
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\bin\Debug\net6.0\DataAccess.Abstractions.dll
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\bin\Debug\net6.0\DataAccess.Abstractions.pdb
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\DataAccess.Abstractions.csproj.AssemblyReference.cache
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\DataAccess.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\DataAccess.Abstractions.AssemblyInfoInputs.cache
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\DataAccess.Abstractions.AssemblyInfo.cs
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\DataAccess.Abstractions.csproj.CoreCompileInputs.cache
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\DataAccess.Abstractions.dll
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\refint\DataAccess.Abstractions.dll
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\DataAccess.Abstractions.pdb
+F:\Work\Sga\DataAccess\DataAccess.Abstractions\obj\Debug\net6.0\ref\DataAccess.Abstractions.dll

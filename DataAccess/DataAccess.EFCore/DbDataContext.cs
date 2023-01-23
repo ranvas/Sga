@@ -123,7 +123,6 @@ namespace DataAccess.EFCore
                 }
                 catch (Exception e)
                 {
-                    int a = 1;
                     throw;
                 }
                 finally

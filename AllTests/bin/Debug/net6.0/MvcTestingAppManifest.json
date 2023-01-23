@@ -1,6 +1,6 @@
 {
-  "BlazorComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\work\\SGA\\core60\\RevolutionMatter\\Web\\BlazorComponents",
-  "BlazorServerSideTestApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\work\\SGA\\core60\\RevolutionMatter\\TestApplications\\BlazorServerSideTestApplication",
-  "Integrators.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators.Core",
-  "Integrators.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Web"
+  "BlazorComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Work\\Sga\\Web\\BlazorComponents",
+  "BlazorServerSideTestApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Work\\Sga\\TestApplications\\BlazorServerSideTestApplication",
+  "Integrators.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Work\\Sga\\Integrators\\Integrators.Core",
+  "Integrators.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "F:\\Work\\Sga\\Integrators\\Integrators.Web"
 }

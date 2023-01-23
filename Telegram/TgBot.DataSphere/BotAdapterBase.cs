@@ -77,7 +77,6 @@ namespace TgBot.DataSphere
                 return;
             if (update.Message is { } message)
             {
-                LogSimple("handle message");
                 try
                 {
                     await HandleMessage(message, update);
@@ -184,7 +183,5 @@ namespace TgBot.DataSphere
         }
 
         #endregion
-
-
     }
 }

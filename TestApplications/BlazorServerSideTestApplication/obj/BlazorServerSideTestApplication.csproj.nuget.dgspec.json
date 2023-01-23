@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\work\\SGA\\core60\\RevolutionMatter\\TestApplications\\BlazorServerSideTestApplication\\BlazorServerSideTestApplication.csproj": {}
+    "F:\\Work\\Sga\\TestApplications\\BlazorServerSideTestApplication\\BlazorServerSideTestApplication.csproj": {}
   },
   "projects": {
-    "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Core\\Integrators.Core.csproj": {
+    "F:\\Work\\Sga\\Integrators\\Integrators.Core\\Integrators.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Core\\Integrators.Core.csproj",
+        "projectUniqueName": "F:\\Work\\Sga\\Integrators\\Integrators.Core\\Integrators.Core.csproj",
         "projectName": "Integrators.Core",
-        "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Core\\Integrators.Core.csproj",
-        "packagesPath": "C:\\Users\\Sluchaj\\.nuget\\packages\\",
-        "outputPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Core\\obj\\",
+        "projectPath": "F:\\Work\\Sga\\Integrators\\Integrators.Core\\Integrators.Core.csproj",
+        "packagesPath": "C:\\Users\\sdd\\.nuget\\packages\\",
+        "outputPath": "F:\\Work\\Sga\\Integrators\\Integrators.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sluchaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\sdd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,26 +61,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Web\\Integrators.Web.csproj": {
+    "F:\\Work\\Sga\\Integrators\\Integrators.Web\\Integrators.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Web\\Integrators.Web.csproj",
+        "projectUniqueName": "F:\\Work\\Sga\\Integrators\\Integrators.Web\\Integrators.Web.csproj",
         "projectName": "Integrators.Web",
-        "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Web\\Integrators.Web.csproj",
-        "packagesPath": "C:\\Users\\Sluchaj\\.nuget\\packages\\",
-        "outputPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Web\\obj\\",
+        "projectPath": "F:\\Work\\Sga\\Integrators\\Integrators.Web\\Integrators.Web.csproj",
+        "packagesPath": "C:\\Users\\sdd\\.nuget\\packages\\",
+        "outputPath": "F:\\Work\\Sga\\Integrators\\Integrators.Web\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sluchaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\sdd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,15 +83,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Core\\Integrators.Core.csproj": {
-                "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Core\\Integrators.Core.csproj"
+              "F:\\Work\\Sga\\Integrators\\Integrators.Core\\Integrators.Core.csproj": {
+                "projectPath": "F:\\Work\\Sga\\Integrators\\Integrators.Core\\Integrators.Core.csproj"
               }
             }
           }
@@ -149,26 +137,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\work\\SGA\\core60\\RevolutionMatter\\TestApplications\\BlazorServerSideTestApplication\\BlazorServerSideTestApplication.csproj": {
+    "F:\\Work\\Sga\\TestApplications\\BlazorServerSideTestApplication\\BlazorServerSideTestApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\work\\SGA\\core60\\RevolutionMatter\\TestApplications\\BlazorServerSideTestApplication\\BlazorServerSideTestApplication.csproj",
+        "projectUniqueName": "F:\\Work\\Sga\\TestApplications\\BlazorServerSideTestApplication\\BlazorServerSideTestApplication.csproj",
         "projectName": "BlazorServerSideTestApplication",
-        "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\TestApplications\\BlazorServerSideTestApplication\\BlazorServerSideTestApplication.csproj",
-        "packagesPath": "C:\\Users\\Sluchaj\\.nuget\\packages\\",
-        "outputPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\TestApplications\\BlazorServerSideTestApplication\\obj\\",
+        "projectPath": "F:\\Work\\Sga\\TestApplications\\BlazorServerSideTestApplication\\BlazorServerSideTestApplication.csproj",
+        "packagesPath": "C:\\Users\\sdd\\.nuget\\packages\\",
+        "outputPath": "F:\\Work\\Sga\\TestApplications\\BlazorServerSideTestApplication\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sluchaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\sdd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -176,18 +159,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Web\\Integrators.Web.csproj": {
-                "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Integrators\\Integrators.Web\\Integrators.Web.csproj"
+              "F:\\Work\\Sga\\Integrators\\Integrators.Web\\Integrators.Web.csproj": {
+                "projectPath": "F:\\Work\\Sga\\Integrators\\Integrators.Web\\Integrators.Web.csproj"
               },
-              "E:\\work\\SGA\\core60\\RevolutionMatter\\Web\\BlazorComponents\\BlazorComponents.csproj": {
-                "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Web\\BlazorComponents\\BlazorComponents.csproj"
+              "F:\\Work\\Sga\\Web\\BlazorComponents\\BlazorComponents.csproj": {
+                "projectPath": "F:\\Work\\Sga\\Web\\BlazorComponents\\BlazorComponents.csproj"
               }
             }
           }
@@ -220,26 +202,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\work\\SGA\\core60\\RevolutionMatter\\Web\\BlazorComponents\\BlazorComponents.csproj": {
+    "F:\\Work\\Sga\\Web\\BlazorComponents\\BlazorComponents.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\work\\SGA\\core60\\RevolutionMatter\\Web\\BlazorComponents\\BlazorComponents.csproj",
+        "projectUniqueName": "F:\\Work\\Sga\\Web\\BlazorComponents\\BlazorComponents.csproj",
         "projectName": "BlazorComponents",
-        "projectPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Web\\BlazorComponents\\BlazorComponents.csproj",
-        "packagesPath": "C:\\Users\\Sluchaj\\.nuget\\packages\\",
-        "outputPath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Web\\BlazorComponents\\obj\\",
+        "projectPath": "F:\\Work\\Sga\\Web\\BlazorComponents\\BlazorComponents.csproj",
+        "packagesPath": "C:\\Users\\sdd\\.nuget\\packages\\",
+        "outputPath": "F:\\Work\\Sga\\Web\\BlazorComponents\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sluchaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\sdd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -247,7 +224,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -287,7 +263,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

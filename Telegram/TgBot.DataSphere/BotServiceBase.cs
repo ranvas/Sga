@@ -58,12 +58,11 @@ namespace TgBot.DataSphere
                 command = textMessage.Substring(0, space);
                 param = textMessage.Substring(space + 1);
             }
-            await HandleCommand(command, param, executionContext);
+            await ExecuteCommand(command, param, executionContext);
         }
 
-        protected virtual Task HandleCommand(string command, string? param, Update executionContext)
+        protected virtual Task ExecuteCommand(string command, string? param, Update executionContext)
         {
-            LogSimple($"command: {command}, param: {param}");
             if (Commands.ContainsKey(command))
             {
                 Commands[command].Execute(param, executionContext, this);

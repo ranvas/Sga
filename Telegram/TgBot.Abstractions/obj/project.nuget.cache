@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "x5L0SrU7Nk4eozQoxjs5Tvpo3s2HZitnP6q/hRNzZX6HEi/yswNfOac4f2nMy36xWP5dc/3H3aK3f4WMqR8NIg==",
+  "dgSpecHash": "5VKHdAcim0toqA9Z8be+aQDDa+K2KnThSK8tWvP8W3bsqoLfbFTOtN9IB4n9Yu0pyVsS1WM6WjXnQutj+b1VCA==",
   "success": true,
-  "projectFilePath": "E:\\work\\SGA\\core60\\RevolutionMatter\\Telegram\\TgBot.Abstractions\\TgBot.Abstractions.csproj",
+  "projectFilePath": "F:\\Work\\Sga\\Telegram\\TgBot.Abstractions\\TgBot.Abstractions.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Sluchaj\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
-    "C:\\Users\\Sluchaj\\.nuget\\packages\\telegram.bot\\18.0.0\\telegram.bot.18.0.0.nupkg.sha512"
+    "C:\\Users\\sdd\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\sdd\\.nuget\\packages\\telegram.bot\\18.0.0\\telegram.bot.18.0.0.nupkg.sha512"
   ],
   "logs": []
 }
