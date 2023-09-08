@@ -16,17 +16,8 @@ namespace DataAccess.EFCore
     /// <summary>
     /// Base class for MS SQL DataSource
     /// </summary>
-    // !! ВАЖНО !!
-    // IDbModelCacheKeyProvider позволяет задать ключ, по которому EF кэширует Model.
-    // В данном случае используется название схемы пользователя (его логин).
-    // Если этого не сделать, то схема будет кэшироваться только один раз - только для того пользователя, который вошел первым.
-    // Если первым вошел MEGATEC, то все вызовы, имеющие непустое значение SchemaName будут выполняться со схемой MEGATEC (например, MEGATEC.Dogovor).
-    // Реализация интерфейса позволяет сказать EF, что Model надо кэшировать для каждого значения SchemaName.
-    public abstract class DbDataContext : DbContext, IDataContext//, IDbModelCacheKeyProvider
+    public abstract class DbDataContext : DbContext, IDataContext
     {
-        // TODO: discover multi-tenant (IDbModelCacheKeyProvider in EF 6)
-        //protected string SchemaName { get; set; }
-
         public DbDataContext()
         {
             Init();
