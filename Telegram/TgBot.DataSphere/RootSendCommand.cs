@@ -11,15 +11,19 @@ namespace TgBot.DataSphere
     {
         public override string? Command { get; set; } = "root_send";
 
-        public override Task Execute(string? param, Update executionContext, BotAdapterBase service)
+        public override async Task Execute(string? param, Update executionContext, BotAdapterBase service)
         {
             var keys = GetKeys(param);
-            if(keys.ContainsKey("type"))
-                return ExecuteTyped(keys["type"], keys, executionContext, service);
-            return Task.CompletedTask;
+            if (keys.ContainsKey("type"))
+            {
+                await ExecuteTyped(keys["type"], keys, executionContext, service);
+                return;
+            }
+            var user = await service.GetMe();
+            await SendMessage($"bot ID: {user.Id}, your ID: {service.GetChatId(executionContext)}", executionContext, service);
         }
 
-        private async Task ExecuteTyped(string type, Dictionary<string, string> param, Update executionContext, BotAdapterBase service) 
+        private async Task ExecuteTyped(string type, Dictionary<string, string> param, Update executionContext, BotAdapterBase service)
         {
             switch (type)
             {
@@ -34,19 +38,25 @@ namespace TgBot.DataSphere
             }
         }
 
+        private async Task SendMessage(string message, Update executionContext, BotAdapterBase service)
+        {
+            var id = service.GetChatId(executionContext);
+            await SendMessage(message, id, executionContext, service);
+        }
+
         private async Task SendMessage(string message, string tgId, Update executionContext, BotAdapterBase service)
         {
-            if(long.TryParse(tgId, out var parsedId))
+            if (long.TryParse(tgId, out var parsedId))
             {
                 await service.SendTextMessage(tgId, message);
             }
-            else
+        }
+
+        private async Task SendMessage(string message, long tgId, Update executionContext, BotAdapterBase service)
+        {
+            if (tgId > 0)
             {
-                var sender = executionContext.Message?.Chat?.Id ?? 0;
-                if(sender > 0)
-                {
-                    await service.SendTextMessage(sender, message);
-                }
+                await service.SendTextMessage(tgId, message);
             }
         }
 
@@ -58,11 +68,11 @@ namespace TgBot.DataSphere
             var keys = new Dictionary<string, string>();
             foreach (var item in input)
             {
-                if(string.IsNullOrEmpty(item)) continue;
+                if (string.IsNullOrEmpty(item)) continue;
                 var split = item.Split(' ');
                 if (split.Length > 1)
                     keys.Add(split[0].Trim().ToLower(), split[1].Trim());
-                 else
+                else
                     keys.Add(split[0].Trim().ToLower(), string.Empty);
             }
             return keys;

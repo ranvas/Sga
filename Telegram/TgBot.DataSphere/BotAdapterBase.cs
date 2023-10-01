@@ -14,6 +14,8 @@ namespace TgBot.DataSphere
         protected CancellationTokenSource CancellationToken;
         public BotAdapterBase(string token)
         {
+            if(string.IsNullOrEmpty(token))
+                throw new ArgumentNullException("token");
             _bot = new TelegramBotClient(token);
             CancellationToken = new CancellationTokenSource();
         }
@@ -112,6 +114,18 @@ namespace TgBot.DataSphere
 
         #region public
 
+        public async Task SendTextMessage(Update executionContext, string message)
+        {
+            var id = GetChatId(executionContext);
+            await SendTextMessage(id, message);
+        }
+
+
+        public long GetChatId(Update executionContext)
+        {
+            return executionContext.Message?.Chat?.Id ?? 0;
+        }
+
         public async Task<User> GetMe()
         {
             return await _bot.GetMeAsync();
@@ -129,6 +143,11 @@ namespace TgBot.DataSphere
                 text: text,
                 parseMode: mode,
                 cancellationToken: CancellationToken.Token);
+        }
+
+        public async Task SendKeyboardTestAsync(long chatId)
+        {
+            await _bot.SetChatMenuButtonAsync(chatId, new MenuButtonDefault(), CancellationToken.Token);
         }
 
         public async Task SendTextMessage(string chatId, string text, ParseMode mode)

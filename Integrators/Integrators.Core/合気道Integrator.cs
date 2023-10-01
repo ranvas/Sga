@@ -14,14 +14,14 @@ namespace Integrators.Core
             await RunAsync(CreateHostBuilder(args), new CancellationToken());
         }
 
-        public IHostBuilder CreateHostBuilder(string[] args) =>
+        private IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
                     Init(services, hostContext.Configuration);
                 });
 
-        public async Task RunAsync(IHostBuilder taskToWatch, CancellationToken token = default)
+        private async Task RunAsync(IHostBuilder taskToWatch, CancellationToken token = default)
         {
             try
             {
@@ -39,6 +39,5 @@ namespace Integrators.Core
         {
             Configuration = configuration;
         }
-
     }
 }

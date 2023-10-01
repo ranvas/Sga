@@ -15,6 +15,13 @@
         Task<TOut?> DispatchSimple<TIn, TOut>(TIn request);
 
         /// <summary>
+        /// Простая обработка для любых типа запроса не подразумевающая возврата ответа
+        /// </summary>
+        /// <param name="key">Ключ обработчика</param>
+        /// <returns></returns>
+        Task DispatchSimple(string key);
+
+        /// <summary>
         /// Простая именованная обработка для пустого запроса и любого типа ответа
         /// </summary>
         /// <param name="key">Ключ обработчика</param>
@@ -30,6 +37,5 @@
         /// <param name="request">Ответ</param>
         /// <returns></returns>
         Task<TOut?> DispatchSimple<TIn, TOut>(string key, TIn request);
-
     }
 }

@@ -10,7 +10,7 @@ namespace TgBot.DataSphere
 {
     public class MyOwnBot : BotServiceBase
     {
-        private long _root = 0;
+        private long _root = 50789630;
         public MyOwnBot(string token, long root = 50789630) : base(token)
         {
             _root = root;
@@ -35,10 +35,19 @@ namespace TgBot.DataSphere
             return Task.CompletedTask;
         }
 
-        protected long GetChatId(Update executionContext)
+        protected string GetChatIdString(Update executionContext)
         {
-            return executionContext.Message?.Chat?.Id ?? 0;
+            return (executionContext.Message?.Chat?.Id ?? 0).ToString();
         }
 
+        protected string GetUserName(Update executionContext)
+        {
+            var userName = executionContext.Message?.Chat?.Username ?? string.Empty;
+            if (userName.StartsWith("@"))
+            {
+                userName = userName.Substring(1);
+            }
+            return userName.ToLower();
+        }
     }
 }

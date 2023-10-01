@@ -44,6 +44,9 @@ namespace Integrators.Dispatcher
             return this;
         }
 
+        public virtual async Task DispatchSimple(string key) =>
+            await DispatchSimple(null, key);
+
         public virtual async Task<TOut?> DispatchSimple<TIn, TOut>(TIn request) =>
             await DispatchSimple<TOut>(request, typeof(TIn).Name);
 
@@ -59,9 +62,20 @@ namespace Integrators.Dispatcher
             return await DispatchSimple<TOut>(request, key, info);
         }
 
+        private async Task DispatchSimple(object? request, string key)
+        {
+            var info = GetMethod(key);
+            await DispatchSimple(request, key, info);
+        }
+
+        private async Task DispatchSimple(object? request, string key, DispatcherInfo info)
+        {
+            using var scope = _serviceProvider.CreateScope();
+            _ = await HostDispatcherHelper.Invoke(info, request, scope);
+        }
+
         private async Task<TOut?> DispatchSimple<TOut>(object? request, string key, DispatcherInfo info)
         {
-
             if (!ReturnTypeIsAssignableTo<TOut>(info))
                 throw new InvalidCastException($"The handler for key {key} returns {info.ResponseType}, although {typeof(TOut)} is expected");
             using var scope = _serviceProvider.CreateScope();
@@ -101,7 +115,7 @@ namespace Integrators.Dispatcher
             MethodInfo? methodInfo;
             try
             {
-                methodInfo = info.InstanceType.GetMethod(info.MethodName, typeRequest != null ? new[] { typeRequest } : Array.Empty<Type>());
+                methodInfo = info.InstanceType.GetMethods().Where(x=>x.Name == info.MethodName && !x.IsGenericMethod).FirstOrDefault();
             }
             catch
             {

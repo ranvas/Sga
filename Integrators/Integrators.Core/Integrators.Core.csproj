@@ -8,4 +8,8 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Telegram\TgBot.DataSphere\TgBot.DataSphere.csproj" />
+	  <ProjectReference Include="..\Integrators.Abstractions\Integrators.Abstractions.csproj" />
+	</ItemGroup>
 </Project>
