@@ -116,14 +116,8 @@ namespace TgBot.DataSphere
 
         public async Task SendTextMessage(Update executionContext, string message)
         {
-            var id = GetChatId(executionContext);
+            var id = BotHelper.GetChatId(executionContext);
             await SendTextMessage(id, message);
-        }
-
-
-        public long GetChatId(Update executionContext)
-        {
-            return executionContext.Message?.Chat?.Id ?? 0;
         }
 
         public async Task<User> GetMe()

@@ -14,6 +14,10 @@ namespace Integrators.Dispatcher
         internal static async Task<object?> Invoke(DispatcherInfo info, object? request, IServiceScope scope)
         {
             var manager = scope.ServiceProvider.GetService(info.InstanceType);
+            if(manager == null)
+            {
+                throw new ArgumentNullException(nameof(info.InstanceType));
+            }
             object? response;
             if (info.AsAsync)
             {

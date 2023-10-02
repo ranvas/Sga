@@ -9,7 +9,7 @@ namespace TgBot.Abstractions
 {
     public interface IBotCommand<T> where T : IBotAdapter
     {
-        public string? Command { get; set; }
-        public Task Execute(string? param, Update executionContext, T service);
+        public string Command { get; set; }
+        public Task<string> Execute(string? param, Update executionContext, T service);
     }
 }

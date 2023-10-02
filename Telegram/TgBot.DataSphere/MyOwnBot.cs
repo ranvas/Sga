@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Integrators.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -8,46 +9,57 @@ using Telegram.Bot.Types;
 
 namespace TgBot.DataSphere
 {
-    public class MyOwnBot : BotServiceBase
+    public class MyOwnBot : BotDispatchingServiceBase
     {
-        private long _root = 50789630;
-        public MyOwnBot(string token, long root = 50789630) : base(token)
+        public readonly long LogsId;
+        public string BotName { get; set; } = "Случайный бот";
+        public List<long> Roots { get; set; }
+        public MyOwnBot(string token, long logs, List<long> roots, string name, IDispatcher dispatcher) : base(token, dispatcher)
         {
-            _root = root;
-            Commands.TryAdd("/root_send", new RootSendCommand());
+            Roots = roots;
+            LogsId = logs;
+            BotName = name;
+            AddCommand(new RootSendCommand());
         }
 
-        protected override sealed Task ExecuteCommand(string command, string? param, Update executionContext)
+        public MyOwnBot(string token, List<long> roots, IDispatcher dispatcher) : this(token, 0, roots, "Случайный бот", dispatcher) { }
+
+        public async Task LogMessage(string message)
         {
-            HandleCommandBefore(command, param, executionContext);
-            if (GetChatId(executionContext) == _root)
-                base.ExecuteCommand(command, param, executionContext);
-            return HandleCommandAfter(command, param, executionContext);
+            if (LogsId == 0) { return; }
+            await SendTextMessage(LogsId, message);
         }
 
-        protected virtual Task HandleCommandBefore(string command, string? param, Update executionContext)
+        protected override async sealed Task<string> ExecuteCommand(string command, string? param, Update executionContext)
         {
-            return Task.CompletedTask;
-        }
-
-        protected virtual Task HandleCommandAfter(string command, string? param, Update executionContext)
-        {
-            return Task.CompletedTask;
-        }
-
-        protected string GetChatIdString(Update executionContext)
-        {
-            return (executionContext.Message?.Chat?.Id ?? 0).ToString();
-        }
-
-        protected string GetUserName(Update executionContext)
-        {
-            var userName = executionContext.Message?.Chat?.Username ?? string.Empty;
-            if (userName.StartsWith("@"))
+            if (Roots.Contains(BotHelper.GetChatId(executionContext)))
             {
-                userName = userName.Substring(1);
+                return await base.ExecuteCommand(command, param, executionContext);
             }
-            return userName.ToLower();
+            var granted = await HandleCommandBefore(command, param, executionContext);
+            if (granted)
+            {
+                var result = await base.ExecuteCommand(command, param, executionContext);
+                await HandleCommandAfter(command, param, executionContext, result);
+            }
+            return string.Empty;
+        }
+
+        protected async virtual Task<bool> HandleCommandBefore(string command, string? param, Update executionContext)
+        {
+            var name = BotHelper.GetUserName(executionContext);
+            var id = BotHelper.GetChatId(executionContext);
+            await LogMessage($"@{name}({id})->{BotName}: {command} {param}");
+            return false;
+        }
+
+        protected async virtual Task HandleCommandAfter(string command, string? param, Update executionContext, string message)
+        {
+            if (string.IsNullOrEmpty(message))
+            { return; }
+            var name = BotHelper.GetUserName(executionContext);
+            var id = BotHelper.GetChatId(executionContext);
+            await LogMessage($"{BotName}->@{name}({id}): {message}");
         }
     }
 }

@@ -4,7 +4,9 @@
     {
         IDispatcher RegisterService<TInstance>(string key, Type? typeRequest, string methodName);
         IDispatcher RegisterService<TInstance>(string key, string methodName);
+        IDispatcher RegisterService<TIn, TInstance>(string key, string methodName);
         IDispatcher RegisterService<TIn, TInstance>(string methodName);
+
         /// <summary>
         /// Простая обработка для любых типа запроса и типа ответа
         /// </summary>

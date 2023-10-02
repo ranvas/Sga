@@ -4,26 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Telegram.Bot.Types;
+using TgBot.Abstractions;
 
 namespace TgBot.DataSphere
 {
-    public class RootSendCommand : BotCommandBase
+    public class RootSendCommand : IBotCommand<IBotAdapter>
     {
-        public override string? Command { get; set; } = "root_send";
+        public string Command { get; set; } = "/root_send";
 
-        public override async Task Execute(string? param, Update executionContext, BotAdapterBase service)
+        public async Task<string> Execute(string? param, Update executionContext, IBotAdapter service)
         {
             var keys = GetKeys(param);
             if (keys.ContainsKey("type"))
             {
-                await ExecuteTyped(keys["type"], keys, executionContext, service);
-                return;
+                return await ExecuteTyped(keys["type"], keys, executionContext, service);
             }
             var user = await service.GetMe();
-            await SendMessage($"bot ID: {user.Id}, your ID: {service.GetChatId(executionContext)}", executionContext, service);
+            var message = $"bot ID: {user.Id}, your ID: {BotHelper.GetChatId(executionContext)}";
+            await SendMessage(message, executionContext, service);
+            return message;
         }
 
-        private async Task ExecuteTyped(string type, Dictionary<string, string> param, Update executionContext, BotAdapterBase service)
+        private async Task<string> ExecuteTyped(string type, Dictionary<string, string> param, Update executionContext, IBotAdapter service)
         {
             switch (type)
             {
@@ -36,15 +38,16 @@ namespace TgBot.DataSphere
                 default:
                     break;
             }
+            return string.Empty;
         }
 
-        private async Task SendMessage(string message, Update executionContext, BotAdapterBase service)
+        private async Task SendMessage(string message, Update executionContext, IBotAdapter service)
         {
-            var id = service.GetChatId(executionContext);
+            var id = BotHelper.GetChatId(executionContext);
             await SendMessage(message, id, executionContext, service);
         }
 
-        private async Task SendMessage(string message, string tgId, Update executionContext, BotAdapterBase service)
+        private async Task SendMessage(string message, string tgId, Update executionContext, IBotAdapter service)
         {
             if (long.TryParse(tgId, out var parsedId))
             {
@@ -52,7 +55,7 @@ namespace TgBot.DataSphere
             }
         }
 
-        private async Task SendMessage(string message, long tgId, Update executionContext, BotAdapterBase service)
+        private async Task SendMessage(string message, long tgId, Update executionContext, IBotAdapter service)
         {
             if (tgId > 0)
             {
@@ -69,11 +72,18 @@ namespace TgBot.DataSphere
             foreach (var item in input)
             {
                 if (string.IsNullOrEmpty(item)) continue;
-                var split = item.Split(' ');
-                if (split.Length > 1)
-                    keys.Add(split[0].Trim().ToLower(), split[1].Trim());
+                var i = item.IndexOf(' ');
+                if (i > 0)
+                {
+                    var name = item.Substring(0, i);
+                    var paramString = item.Substring(i).Trim();
+                    keys.Add(name, paramString);
+                }
                 else
-                    keys.Add(split[0].Trim().ToLower(), string.Empty);
+                {
+                    var name = item.Substring(0);
+                    keys.Add(name, string.Empty);
+                }
             }
             return keys;
         }

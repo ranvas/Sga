@@ -17,6 +17,12 @@ namespace Integrators.Dispatcher
         public virtual IDispatcher RegisterService<TIn, TInstance>(string methodName) =>
             RegisterService<TInstance>(typeof(TIn).Name, typeof(TIn), methodName);
 
+
+        public virtual IDispatcher RegisterService<TIn, TInstance>(string key, string methodName)
+        {
+            return RegisterService<TIn, TInstance>(key, typeof(TIn), methodName);
+        }
+
         /// <summary>
         /// Register TInstance for using string key and string methodName of reflection
         /// </summary>
@@ -27,6 +33,8 @@ namespace Integrators.Dispatcher
         public virtual IDispatcher RegisterService<TInstance>(string key, string methodName) =>
             RegisterService<TInstance>(key, null, methodName);
 
+
+
         /// <summary>
         /// Register TInstance for using string key and string methodName of reflection and receive Type typeRequest
         /// </summary>
@@ -36,6 +44,25 @@ namespace Integrators.Dispatcher
         /// <param name="methodName"></param>
         /// <returns></returns>
         public virtual IDispatcher RegisterService<TInstance>(string key, Type? typeRequest, string methodName)
+        {
+            if (!TryRegisterMethod<TInstance>(key, typeRequest, methodName))
+            {
+                throw new ApplicationException($"registering key:{key} for {methodName} failed");
+            }
+            return this;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="TInstance"></typeparam>
+        /// <typeparam name="TIn"></typeparam>
+        /// <param name="key"></param>
+        /// <param name="typeRequest"></param>
+        /// <param name="methodName"></param>
+        /// <returns></returns>
+        /// <exception cref="ApplicationException"></exception>
+        public virtual IDispatcher RegisterService<TIn, TInstance>(string key, Type? typeRequest, string methodName)
         {
             if (!TryRegisterMethod<TInstance>(key, typeRequest, methodName))
             {
@@ -112,14 +139,14 @@ namespace Integrators.Dispatcher
             {
                 RequestType = typeRequest
             };
-            MethodInfo? methodInfo;
+            MethodInfo? methodInfo = null;
             try
             {
                 methodInfo = info.InstanceType.GetMethods().Where(x=>x.Name == info.MethodName && !x.IsGenericMethod).FirstOrDefault();
             }
             catch
             {
-                return false;
+                //TODO: отрефакторить, избавиться от try catch
             }
 
             if (methodInfo == null)
@@ -128,7 +155,15 @@ namespace Integrators.Dispatcher
                 return false;
             }
             var asAsync = HostDispatcherHelper.IsAsync(methodInfo);
-            info.ResponseType = asAsync ? methodInfo.ReturnType.GenericTypeArguments[0] : methodInfo.ReturnType;
+            if(methodInfo.ReturnType.GenericTypeArguments.Length == 0)
+            {
+                info.ResponseType = methodInfo.ReturnType;
+            }
+            else 
+            {
+                info.ResponseType = asAsync ? methodInfo.ReturnType.GenericTypeArguments[0] : methodInfo.ReturnType;
+            }
+            
             info.AsAsync = asAsync;
             info.MethodInfo = methodInfo;
             info.Resolved = true;

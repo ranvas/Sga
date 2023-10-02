@@ -9,6 +9,7 @@
 		<PackageReference Include="Telegram.Bot" Version="19.0.0" />
 	</ItemGroup>
 	<ItemGroup>
+	  <ProjectReference Include="..\..\Integrators\Integrators.Abstractions\Integrators.Abstractions.csproj" />
 	  <ProjectReference Include="..\TgBot.Abstractions\TgBot.Abstractions.csproj" />
 	</ItemGroup>
 </Project>
