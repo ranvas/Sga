@@ -28,7 +28,7 @@ namespace DataAccess.EFCore
             using (var db = CreateDataContext())
             {
                 var query = db.CreateQuery(includes);
-                return query.ToList();
+                return query.AsNoTracking().ToList();
             }
         }
 
@@ -37,7 +37,7 @@ namespace DataAccess.EFCore
             using (var db = CreateDataContext())
             {
                 var query = db.CreateQuery(includes);
-                return await query.ToListAsync();
+                return await query.AsNoTracking().ToListAsync();
             }
         }
 
@@ -48,7 +48,7 @@ namespace DataAccess.EFCore
                 var query = db.CreateQuery(includes)
                     .ApplyWhereClause(where);
 
-                return query.ToList();
+                return query.AsNoTracking().ToList();
             }
         }
 
@@ -59,7 +59,7 @@ namespace DataAccess.EFCore
                 var query = db.CreateQuery(includes)
                     .ApplyWhereClause(where);
 
-                return await query.ToListAsync();
+                return await query.AsNoTracking().ToListAsync();
             }
         }
 
@@ -71,7 +71,7 @@ namespace DataAccess.EFCore
                     .ApplyWhereClause(where)
                     .ApplyOrderByClause(orderBy);
 
-                return query.FirstOrDefault();
+                return query.AsNoTracking().FirstOrDefault();
             }
         }
 
@@ -83,7 +83,7 @@ namespace DataAccess.EFCore
                     .ApplyWhereClause(where)
                     .ApplyOrderByClause(orderBy);
 
-                return await query.FirstOrDefaultAsync();
+                return await query.AsNoTracking().FirstOrDefaultAsync();
             }
         }
 
@@ -92,7 +92,7 @@ namespace DataAccess.EFCore
             using (var db = CreateDataContext())
             {
                 var query = db.CreateQuery<T>(includes);
-                return query.ToList();
+                return query.AsNoTracking().ToList();
             }
         }
 
@@ -101,7 +101,7 @@ namespace DataAccess.EFCore
             using (var db = CreateDataContext())
             {
                 var query = db.CreateQuery<T>(includes);
-                return await query.ToListAsync();
+                return await query.AsNoTracking().ToListAsync();
             }
         }
 
@@ -112,7 +112,7 @@ namespace DataAccess.EFCore
                 var query = db.CreateQuery<T>(includes)
                     .ApplyWhereClause(where);
 
-                return query.ToList();
+                return query.AsNoTracking().ToList();
             }
         }
 
@@ -123,7 +123,7 @@ namespace DataAccess.EFCore
                 var query = db.CreateQuery<T>(includes)
                     .ApplyWhereClause(where);
 
-                return await query.ToListAsync();
+                return await query.AsNoTracking().ToListAsync();
             }
         }
 
@@ -135,7 +135,7 @@ namespace DataAccess.EFCore
                     .ApplyWhereClause(where)
                     .ApplyOrderByClause(orderBy);
 
-                return query.FirstOrDefault();
+                return query.AsNoTracking().FirstOrDefault();
             }
         }
 
@@ -147,7 +147,7 @@ namespace DataAccess.EFCore
                     .ApplyWhereClause(where)
                     .ApplyOrderByClause(orderBy);
 
-                return await query.FirstOrDefaultAsync();
+                return await query.AsNoTracking().FirstOrDefaultAsync();
             }
         }
 

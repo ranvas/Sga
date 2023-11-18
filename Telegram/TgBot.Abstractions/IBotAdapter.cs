@@ -1,4 +1,6 @@
-﻿using Telegram.Bot.Types;
+﻿using System.Threading.Tasks;
+using Telegram.Bot.Types;
+using Telegram.Bot.Types.Enums;
 
 namespace TgBot.Abstractions
 {
@@ -8,5 +10,8 @@ namespace TgBot.Abstractions
         Task HandleUpdateAsync(Update update);
         Task SendTextMessage(long chatId, string text);
         Task SendTextMessage(string chatId, string text);
+        Task SendTextMessage(Update executionContext, string message);
+        Task SendTextMessage(long chatId, string text, ParseMode mode);
+        Task SendTextMessage(string chatId, string text, ParseMode mode);
     }
 }

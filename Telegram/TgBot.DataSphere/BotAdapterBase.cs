@@ -37,21 +37,6 @@ namespace TgBot.DataSphere
             );
         }
 
-        public void StartReceiving<T>() where T : class
-        {
-            LogSimple("StartReceiving bot ");
-            var receiverOptions = new ReceiverOptions
-            {
-                AllowedUpdates = Array.Empty<UpdateType>() // receive all update types
-            };
-            _bot.StartReceiving(
-                updateHandler: HandleUpdateAsync,
-                pollingErrorHandler: HandlePollingErrorAsync,
-                receiverOptions: receiverOptions,
-                cancellationToken: CancellationToken.Token
-            );
-        }
-
         Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
         {
             var ErrorMessage = exception switch
@@ -81,7 +66,7 @@ namespace TgBot.DataSphere
             {
                 try
                 {
-                    await HandleMessage(message, update);
+                    await HandleMessageAsync(message, update);
                 }
                 catch (Exception e)
                 {
@@ -167,7 +152,7 @@ namespace TgBot.DataSphere
 
         #region protected
 
-        protected virtual async Task HandleMessage(Message message, Update executionContext)
+        protected virtual async Task HandleMessageAsync(Message message, Update executionContext)
         {
             if (message.Text is { } messageText)
             {
@@ -181,7 +166,7 @@ namespace TgBot.DataSphere
 
         protected virtual async Task HandleEditedMessage(Message message, Update executionContext)
         {
-            await HandleMessage(message, executionContext);
+            await HandleMessageAsync(message, executionContext);
         }
 
         protected virtual Task HandleSticker(Sticker sticker, Update executionContext)

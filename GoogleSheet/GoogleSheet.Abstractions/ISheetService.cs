@@ -10,7 +10,7 @@ namespace GoogleSheet.Abstractions
     {
         Task PostItem(T item);
         Task PostItems(List<T> items);
-        Task<List<T>> GetAllItems();
+        Task<List<T>> GetAllItemsAsync();
         Task ClearAllItems();
     }
 }

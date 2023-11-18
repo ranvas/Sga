@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "avKM70PbpQd/h5Mwp9nNQlwyzn5h/KbSiCUy21iMAv5Dl2pM0v+EZVyPjpyja45SPJADZDSxD8KQAbOK1JWxWQ==",
+  "dgSpecHash": "atcM66/cY2Go54gvj9DOcIiTN5+WZfv9chRatgWFTmgEwxIaZHWuocsV3sxgSqJpjgaGICO/Jg5Y41C+fXQPMw==",
   "success": true,
   "projectFilePath": "F:\\Work\\Sga\\DataAccess\\DataAccess.Abstractions\\DataAccess.Abstractions.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sdd\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\7.0.0\\microsoft.netcore.app.runtime.win-x86.7.0.0.nupkg.sha512",
+    "C:\\Users\\sdd\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\7.0.0\\microsoft.windowsdesktop.app.runtime.win-x86.7.0.0.nupkg.sha512",
+    "C:\\Users\\sdd\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\7.0.0\\microsoft.aspnetcore.app.runtime.win-x86.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

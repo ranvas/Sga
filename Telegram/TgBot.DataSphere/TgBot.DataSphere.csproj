@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -10,6 +10,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\..\Integrators\Integrators.Abstractions\Integrators.Abstractions.csproj" />
+	  <ProjectReference Include="..\..\Text\Serialization\Serialization.csproj" />
 	  <ProjectReference Include="..\TgBot.Abstractions\TgBot.Abstractions.csproj" />
 	</ItemGroup>
 </Project>

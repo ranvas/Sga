@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Integrators.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,25 +9,28 @@ using TgBot.Abstractions;
 
 namespace TgBot.DataSphere
 {
-    public class DefaultCommand : IBotCommand<IBotAdapter> 
+    public class DefaultCommand : IDispatchedCommand<IBotAdapter, IDispatcher>
     {
         public virtual string Command { get; set; } = "/default";
-
-        public virtual async Task<string> ExecuteDispatched(string? param, Update executionContext, BotDispatchingServiceBase service)
+        public virtual Task<bool> ExecuteBeforeAsync(string? param, Update executionContext, IBotAdapter service, IDispatcher dispatcher)
         {
-            var id = BotHelper.GetChatId(executionContext);
-            var message = $"your ID: {id}";
-            await service.SendTextMessage(id, message);
-            return message;
+            return Task.FromResult(true);
         }
 
-        public async Task<string> Execute(string? param, Update executionContext, IBotAdapter service)
+        public virtual Task<string> ExecuteAsync(string? param, Update executionContext, IBotAdapter service)
         {
-            if(service is BotDispatchingServiceBase)
+            if(param  == "id")
             {
-                return await ExecuteDispatched(param, executionContext, (BotDispatchingServiceBase)service);
+                var id = BotHelper.GetChatId(executionContext);
+                var message = $"your ID: {id}";
+                return Task.FromResult(message);
             }
-            return string.Empty;
+            return Task.FromResult(param ?? string.Empty);
+        }
+
+        public virtual Task<string> ExecuteAfterAsync(string? param, Update executionContext, IBotAdapter service, IDispatcher dispatcher)
+        {
+            return Task.FromResult(param ?? string.Empty);
         }
     }
 }

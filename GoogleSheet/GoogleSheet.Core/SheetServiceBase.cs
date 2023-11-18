@@ -21,7 +21,7 @@ namespace GoogleSheet.Core
             _adapter = adapter;
         }
 
-        public async Task<List<T>> GetAllItems()
+        public async Task<List<T>> GetAllItemsAsync()
         {
             return await LoadAllItems();
         }

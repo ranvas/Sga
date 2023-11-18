@@ -89,16 +89,21 @@ namespace Integrators.Dispatcher
             return await DispatchSimple<TOut>(request, key, info);
         }
 
-        private async Task DispatchSimple(object? request, string key)
+        public async Task DispatchSimple(object? request, string key)
         {
             var info = GetMethod(key);
             await DispatchSimple(request, key, info);
         }
 
+        public bool ContainsKey(string key)
+        {
+            return RegisteredMethods.TryGetValue(key, out DispatcherInfo? info) && info.Resolved;
+        }
+
         private async Task DispatchSimple(object? request, string key, DispatcherInfo info)
         {
             using var scope = _serviceProvider.CreateScope();
-            _ = await HostDispatcherHelper.Invoke(info, request, scope);
+            await HostDispatcherHelper.InvokeVoid(info, request, scope);
         }
 
         private async Task<TOut?> DispatchSimple<TOut>(object? request, string key, DispatcherInfo info)
@@ -170,5 +175,7 @@ namespace Integrators.Dispatcher
             RegisteredMethods.AddOrUpdate(key, info, (_, _) => info);
             return true;
         }
+
+
     }
 }

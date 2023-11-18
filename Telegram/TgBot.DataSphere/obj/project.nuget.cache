@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "RD6mizX2nYSxFsNiL7koHIMLJxyKiV8wEZxOLlclAvO0zl/IpXfRKEmc+dL3YOCFoNcCuX1Wp2tmMAZ9JqHWzg==",
+  "dgSpecHash": "0zNOQrNabXuHB1DKzv6PDfhCHQXNIbgKNkHFLZf1ra9oFRPtBi+edvwpiIVlxqP58fBD1odDqLZLndF5BjWuzw==",
   "success": true,
   "projectFilePath": "F:\\Work\\Sga\\Telegram\\TgBot.DataSphere\\TgBot.DataSphere.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sdd\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\sdd\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\sdd\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
-    "C:\\Users\\sdd\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\sdd\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\sdd\\.nuget\\packages\\telegram.bot\\19.0.0\\telegram.bot.19.0.0.nupkg.sha512"
+    "C:\\Users\\sdd\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\sdd\\.nuget\\packages\\telegram.bot\\19.0.0\\telegram.bot.19.0.0.nupkg.sha512",
+    "C:\\Users\\sdd\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\7.0.0\\microsoft.netcore.app.runtime.win-x86.7.0.0.nupkg.sha512",
+    "C:\\Users\\sdd\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\7.0.0\\microsoft.windowsdesktop.app.runtime.win-x86.7.0.0.nupkg.sha512",
+    "C:\\Users\\sdd\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\7.0.0\\microsoft.aspnetcore.app.runtime.win-x86.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
